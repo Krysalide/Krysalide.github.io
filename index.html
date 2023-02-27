@@ -1,84 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation Nouvelle-Zélande</title>
+        <title>Premier essai de page geogebra</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="navigation.js"></script>
 </head>
 
-<body class="corps">
-    <center>
-        <H1>La nouvelle-Zélande: un des plus beaux pays au monde</H1>
-        <p class="cadre">La Nouvelle-Zélande (en anglais : New Zealand ; en maori : Aotearoa) est un pays insulaire d'Océanie, situé dans le sud-ouest de l'océan Pacifique. Elle est constituée de deux îles principales : l'île du Nord et l'île du Sud, ainsi que de 700
-            plus petites îles. Se situant à environ 2 000 km au sud-est de l'Australie, dont elle est séparée par la mer de Tasman, elle se trouve également à 1 000 km au sud des îles de Nouvelle-Calédonie, des Fidji et des Tonga. Son isolement géographique
-            a permis le développement d'une faune et d'une flore endémiques riches et variées, allant des conifères kauri géants aux insectes weta, en passant par la fougère argentée et l'oiseau kiwi, ces deux derniers étant des symboles nationaux. La
-            topographie variée du pays et ses pics montagneux, dont ceux des Alpes du Sud, doivent beaucoup au soulèvement tectonique et aux éruptions volcaniques. Sa capitale est Wellington et sa plus grande ville est Auckland.</p>
-        <hr>
+<body>
+<div>
+        <h1>App de géométrie 3D Projet Simplon </h1>
+        <p style="width:800px"> 
+        <p>
 
-        <p>Une des particularités de la nouvelle-zélande est la diversité des paysages, vous pouvez profiter de la mer ou même aller skier dans la même journée.En raison de son histoire, la population néo-zélandaise est riche de plusieurs compositions ethniques.
-            Il y a essentiellement des Européens (69 %), mais aussi des Maoris (7,9 %). A côté de cela, on trouve les populations asiatiques (5,7 %) et celles des Îles du Pacifique (4,4 %). Il y a environ 4 millions d'habitants et la densité de population
-            est assez faible. La devise du pays est le dollar neo zelandais.
         </p>
-        <h3>Des paysages à couper le souffle</h3>
-        <img src="https://media.istockphoto.com/photos/lake-marian-picture-id1159979214?k=20&m=1159979214&s=612x612&w=0&h=cXoJfJixJ40uxYe-HR_m6zSEa7gw6CKdPUyc1PDzc2Y=" alt="zelande">
-        <p></p>
-        <img src="https://media.istockphoto.com/photos/the-milford-sound-fiord-fiordland-national-park-new-zealand-picture-id875331434?k=20&m=875331434&s=612x612&w=0&h=feTf1dKL83Vm7HdFD04sHYVYqb1aSBPZxOiqsETbkeE=" alt="zelande">
+        <a href="https://wiki.geogebra.org/en/Reference:Applet_Parameters">Lien vers la Documentation</a></p>
+        <!--   <a class="btn active" id="app_graphing" href="example-graphing.html">Graphing Calculator</a>
+        <a class="btn" id="app_geometry" href="example-geometry.html">Geometry</a>
+        <a class="btn" id="app_classic" href="example-tools.html">Classic</a> -->
+        <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+                
+       <form>
+       <input type="button" value="Réinitialiser" onclick="ggbApplet.reset();">
+       </form>
+        <script type="text/javascript">
+				
+                function perspective(p){
+		updateHelp(p);
+		ggbApplet.setPerspective(p);
+				}
+                var parameters = {
+                        "id":"ggbApplet",
+                        "appName":"3d",
+                        "width":1800,
+                        "height":800,
+                        "showToolBar":true,
+                        "borderColor":null,
+                        "showMenuBar":true,
+                        "allowStyleBar":true,
+                        "showAlgebraInput":true,
+                        "enableLabelDrags":false,
+                        "enableShiftDragZoom":true,
+                        "capturingThreshold":null,
+                        "showToolBarHelp":false,
+                        "errorDialogsActive":true,
+                        "showTutorialLink":true,
+                        "showLogging":true,
+                        "useBrowserForJS":false};
 
-        <p></p>
-        <h3>une petite video de la chaine youtube Zone decouverte</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/RJ1rIM5GG0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                var applet = new GGBApplet(parameters, '5.0', 'applet_container');
+               //  when used with Math Apps Bundle, uncomment this:
+               //  applet.setHTML5Codebase('GeoGebra/HTML5/5.0/web3d/');
 
-        <p></p>
-        <img src="https://www.courrierinternational.com/sites/ci_master/files/styles/image_original_1280/public/assets/images/capture_decran_2016-09-20_a_15.41.23.png?itok=IPPT_cY8" alt="zelande">
-        <p></p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/NZL_orthographic_NaturalEarth.svg/langfr-220px-NZL_orthographic_NaturalEarth.svg.png" alt="localisation">
-        <hr>
-        <div style="text-align:center;padding:1em 0;">
-            <h4><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/fr/city/2193733"><span style="color:rgb(245, 237, 237);">Heure actuelle Auckland</span></a></h4> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=small&timezone=Pacific%2FAuckland"
-                width="100%" height="90" frameborder="0" seamless></iframe> </div>
-        <p>Vous souhaitez visiter la Nouvelle-Zélande? vous trouverez quelques infos pratiques sur ces sites</p>
-        <p></p>
-        <a href="https://www.mfat.govt.nz/fr/countries-and-regions/europe/france/new-zealand-embassy/"><input type="button" value="AMBASSADE DE NOUVELLE ZELANDE"></a>
+                window.onload = function() { applet.inject('applet_container'); }
 
-        <br>
+        </script>
 
-        <p></p>
 
-        <a href="https://www.routard.com/guide/code_dest/nouvelle_zelande.htm"><input type="button" value="LE SITE DU GUIDE DU ROUTARD"></a>
-
-        <p></p>
-        <a href="https://www.nzvoyages.com/">
-            <input type="button" value="UNE AGENCE DE VOYAGE">
-        </a>
-        <hr>
-        <hr>
-
-        <div class="basdepage"></div>
-
-    </center>
-    <footer>
-        <p>© 2022 Delapierre Christophe</p>
-    </footer>
-
+        <div id="applet_container"></div>
+		</div>
 </body>
-<style>
-    .corps {
-        background-color: rgb(128, 128, 128);
-        font-style: normal;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: whitesmoke;
-    }
-    
-    .basdepage {
-        background-color: blueviolet;
-    }
-    .cadre { border: 1px solid black; padding: 5px; } 
-    
-    #h1 {
-        color: rgb(27, 116, 218);
-    }
-</style>
 
 </html>
