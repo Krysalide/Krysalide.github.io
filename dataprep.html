@@ -30,8 +30,27 @@
             margin: 0 10px;
             padding: 10px;
             font-size: 16px;
+            color: white;
+        }
+
+        #orderItemsBtn {
             background-color: rgb(92, 79, 178);
-            color:azure
+        }
+
+        #ordersBtn {
+            background-color: rgb(60, 179, 113);
+        }
+
+        #orderPaymentsBtn {
+            background-color: rgb(70, 130, 180);
+        }
+
+        #customersBtn {
+            background-color: rgb(255, 165, 0);
+        }
+
+        #clientBtn {
+            background-color: rgb(255, 69, 0); /* Couleur forte pour différencier */
         }
     </style>
 </head>
@@ -42,65 +61,38 @@
 
     <!-- Navigation controls -->
     <div class="controls">
-        <button id="backBtn">Backward</button>
-        <button id="forwardBtn">Forward</button>
+        <button id="orderItemsBtn">Order Items</button>
+        <button id="ordersBtn">Orders</button>
+        <button id="orderPaymentsBtn">Order Payments</button>
+        <button id="customersBtn">Customers</button>
+        <button id="clientBtn">Fichier Client</button>
     </div>
 
     <script>
-        // Array of pages to navigate through
-        const pages = ['order_items-dataset.html','orders-dataset.html', 'order_pymts-dataset.html', 'customers-dataset.html'];
-        let currentIndex = 0;
-
-        // Update iframe and button labels
-        function updatePage() {
-            // Update iframe src
-            document.getElementById('subpageFrame').src = pages[currentIndex];
-            updateButtonLabels();
-        }
-
-        // Update button text to show next and previous page names
-        function updateButtonLabels() {
-            const backBtn = document.getElementById('backBtn');
-            const forwardBtn = document.getElementById('forwardBtn');
-
-            // Update backward button
-            if (currentIndex > 0) {
-                backBtn.textContent = ` ${getPageName(pages[currentIndex - 1])}`;
-            } else {
-                backBtn.textContent = 'Pas de page precedente';
-            }
-
-            // Update forward button
-            if (currentIndex < pages.length - 1) {
-                forwardBtn.textContent = ` ${getPageName(pages[currentIndex + 1])}`;
-            } else {
-                forwardBtn.textContent = 'Fin des pages';
-            }
-        }
-
-        // Helper function to extract page name from file name
-        function getPageName(page) {
-            return page.replace('.html', '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-        }
-
-        // Handle forward button click
-        document.getElementById('forwardBtn').addEventListener('click', function() {
-            if (currentIndex < pages.length - 1) {
-                currentIndex++;
-                updatePage();
-            }
+        // Handle order items button click
+        document.getElementById('orderItemsBtn').addEventListener('click', function() {
+            document.getElementById('subpageFrame').src = 'order_items-dataset.html';
         });
 
-        // Handle backward button click
-        document.getElementById('backBtn').addEventListener('click', function() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updatePage();
-            }
+        // Handle orders button click
+        document.getElementById('ordersBtn').addEventListener('click', function() {
+            document.getElementById('subpageFrame').src = 'orders-dataset.html';
         });
 
-        // Initial button label setup
-        updateButtonLabels();
+        // Handle order payments button click
+        document.getElementById('orderPaymentsBtn').addEventListener('click', function() {
+            document.getElementById('subpageFrame').src = 'order_pymts-dataset.html';
+        });
+
+        // Handle customers button click
+        document.getElementById('customersBtn').addEventListener('click', function() {
+            document.getElementById('subpageFrame').src = 'customers-dataset.html';
+        });
+
+        // Handle client button click
+        document.getElementById('clientBtn').addEventListener('click', function() {
+            document.getElementById('subpageFrame').src = 'client_data_eda.html';
+        });
     </script>
 
 </body>
